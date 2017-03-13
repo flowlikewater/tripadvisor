@@ -1,0 +1,21 @@
+{
+  "topics": [{
+    "location": "Hong Kong",
+    "type": "restaurant",
+    "name": "Orange Chicken",
+    "description": "classic french restaurant with amazing chicken wings",
+    "price": "20"
+    },{
+    "location": "Hong Kong",
+    "type": "hotel",
+    "name": "Four Seasons",
+    "description": "the grandest hotel in hong kong",
+    "price": "1000"
+  },{
+    "location": "Hong Kong",
+    "type": "landmark",
+    "name": "Big Buddha",
+    "description": "100 tons of copper - the biggest buddha statue in hong kong",
+    "price": "300"
+  }]
+}

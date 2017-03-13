@@ -1,0 +1,9 @@
+<div class='container row col-md-12'>
+  {{search-type}}
+</div>
+
+<div class='container row col-md-8'>
+  {{#each model.landmark as |topic|}}
+    {{topic-tile topic=topic}}
+  {{/each}}
+</div>

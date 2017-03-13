@@ -1,0 +1,39 @@
+typeIsAll: function() {
+  return this.get('type') === 'all';
+}.property('type'),
+typeIsRestaurant: function() {
+  return this.get('type') === 'restaurant';
+}.property('type'),
+typeIsHotel: function() {
+  return this.get('type') === 'hotel';
+}.property('type'),
+typeIsLandmark: function() {
+  return this.get('type') === 'landmark';
+}.property('type'),
+
+{{else if typeIsRestaurant}}
+  {{#each model.restaurant as |topic|}}
+    {{topic-tile topic=topic}}
+  {{/each}}
+{{else if typeIsHotel}}
+  {{#each model.hotel as |topic|}}
+    {{topic-tile topic=topic}}
+  {{/each}}
+{{else if typeIsLandmark}}
+  {{#each model.landmark as |topic|}}
+    {{topic-tile topic=topic}}
+  {{/each}}
+
+  all: this.store.findAll('topic'),
+  restaurant: this.store.query('topic', {
+    orderBy: 'type',
+    equalTo: 'restaurant'
+  }),
+  hotel: this.store.query('topic', {
+    orderBy: 'type',
+    equalTo: 'hotel'
+  }),
+  landmark: this.store.query('topic', {
+    orderBy: 'type',
+    equalTo: 'landmark'
+  }),

@@ -1,0 +1,35 @@
+{{#if updateTopicForm}}
+  <h4>Update {{topic.owner}}'s {{topic.type}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="location">Location</label>
+        {{input value=location id="location" placeholder=topic.location}}
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        {{input value=type id="type" placeholder=topic.type}}
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name" placeholder=topic.name}}
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{input value=description id="description" placeholder=topic.description}}
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=price id="price" placeholder=topic.price}}
+      </div>
+
+      <button {{action 'update' topic}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateTopicForm'}}>Update</button>
+{{/if}}

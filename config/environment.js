@@ -17,6 +17,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyCji8kcm7PvGwZ-ZbGpcaW5dWGFcy28gew",
+      authDomain: "tripadvisor-67a32.firebaseapp.com",
+      databaseURL: "https://tripadvisor-67a32.firebaseio.com",
+      storageBucket: "tripadvisor-67a32.appspot.com",
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
