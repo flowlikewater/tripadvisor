@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('landmark');
   this.route('hotel');
   this.route('topic', {path: '/topic/:topic_id'});
+  this.route('saved');
 });
 
 export default Router;

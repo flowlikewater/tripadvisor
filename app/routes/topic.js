@@ -13,6 +13,13 @@ export default Ember.Route.extend({
       });
       model.save();
     },
-
+    saveReview(params) {
+      var newReview = this.store.createRecord('review', params);
+      var topic = params.topic;
+      topic.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return topic.save();
+      });
+    },
   }
 });

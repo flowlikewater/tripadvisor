@@ -1,5 +1,11 @@
+<br>
 <h2>More information about {{model.name}}</h2>
+Popularity: {{topic-rating model.reviews}}
 <h5>Type: {{model.type}}</h5>
 <p>Price: {{model.price}}</p>
 <p>Description: {{model.description}}</p>
 {{update-topic topic=model update='update'}}
+{{add-review topic=model saveReview='saveReview'}}
+{{#each model.reviews as |review|}}
+  {{display-reviews review=review}}
+{{/each}}

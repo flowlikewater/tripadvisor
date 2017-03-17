@@ -4,27 +4,27 @@
     <form>
       <div class="form-group">
         <label for="location">Location</label>
-        {{input value=location id="location" placeholder=topic.location}}
+        {{input value=topic.location id="location" placeholder=topic.location}}
       </div>
 
       <div class="form-group">
         <label for="type">Type</label>
-        {{input value=type id="type" placeholder=topic.type}}
+        {{input value=topic.type id="type" placeholder=topic.type}}
       </div>
 
       <div class="form-group">
         <label for="name">Name</label>
-        {{input value=name id="name" placeholder=topic.name}}
+        {{input value=topic.name id="name" placeholder=topic.name}}
       </div>
 
       <div class="form-group">
         <label for="description">Description</label>
-        {{input value=description id="description" placeholder=topic.description}}
+        {{input value=topic.description id="description" placeholder=topic.description}}
       </div>
 
       <div class="form-group">
         <label for="price">Price</label>
-        {{input value=price id="price" placeholder=topic.price}}
+        {{input value=topic.price id="price" placeholder=topic.price}}
       </div>
 
       <button {{action 'update' topic}}>Save</button>

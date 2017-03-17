@@ -1,0 +1,30 @@
+{{#if addNewTopic}}
+<h1>New Topic</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="location">Location</label>
+        {{input value=location id="location"}}
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        {{input value=type id="type"}}
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{input value=name id="name"}}
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        {{input value=description id="description"}}
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        {{input value=price id="price"}}
+      </div>
+      <button {{action 'saveTopic'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'formShow'}}>New Topic</button>
+{{/if}}

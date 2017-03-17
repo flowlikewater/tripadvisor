@@ -24,7 +24,12 @@ export default Ember.Route.extend({
   actions: {
     changeType(type){
       this.set('type',type);
+    },
+    saveTopic(params){
+      var publishTopic = this.store.createRecord ('topic',params);
+      publishTopic.save();
+      this.transitionTo('index')
     }
-  },
+  }
 
 });

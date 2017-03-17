@@ -1,0 +1,10 @@
+<hr>
+<p>Number of saved topics: {{categorization.topics.length}}</p>
+<hr>
+{{#each categorization.topics as |topics|}}
+  <h3>{{topics.name}}</h3>
+  <h5>{{topics.type}}</h5>
+  <p>Price: {{topics.price}}</p>
+  <p>Description: {{topics.description}}</p>
+  <hr>
+{{/each}}

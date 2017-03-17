@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr(),
-  rating: DS.attr(),
+  rating: DS.attr("number"),
   comment: DS.attr(),
-  reviews: DS.hasMany('review', {async: true})
+  topic: DS.belongsTo('topic', {async: true})
 });
